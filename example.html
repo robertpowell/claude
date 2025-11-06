@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UK IP Tracking Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .status {
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .info {
+            background-color: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .loading {
+            background-color: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeaa7;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 15px;
+            border-radius: 4px;
+            overflow-x: auto;
+            border: 1px solid #ddd;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        .info-box {
+            background-color: #e7f3ff;
+            border-left: 4px solid #2196F3;
+            padding: 15px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🇬🇧 UK IP Tracking Demo</h1>
+
+        <div class="info-box">
+            <strong>How it works:</strong>
+            <ul>
+                <li>Detects your IP address</li>
+                <li>Checks if you're from the UK (using free service)</li>
+                <li>Only calls UserStack API if you're UK-based</li>
+                <li>Saves API costs by filtering non-UK traffic</li>
+            </ul>
+        </div>
+
+        <button id="trackBtn" onclick="trackVisitor()">Track My Visit</button>
+
+        <div id="status" class="status loading" style="display: none;">
+            Checking your location...
+        </div>
+
+        <div id="result" style="display: none;">
+            <h3>Result:</h3>
+            <pre id="resultData"></pre>
+        </div>
+    </div>
+
+    <script>
+        async function trackVisitor() {
+            const statusDiv = document.getElementById('status');
+            const resultDiv = document.getElementById('result');
+            const resultData = document.getElementById('resultData');
+            const trackBtn = document.getElementById('trackBtn');
+
+            // Show loading state
+            statusDiv.style.display = 'block';
+            statusDiv.className = 'status loading';
+            statusDiv.textContent = 'Checking your location...';
+            resultDiv.style.display = 'none';
+            trackBtn.disabled = true;
+
+            try {
+                // Call the tracking script
+                // IMPORTANT: Update this URL to your actual domain
+                const response = await fetch('track.php');
+                const data = await response.json();
+
+                // Update status based on result
+                if (data.success) {
+                    statusDiv.className = 'status success';
+                    statusDiv.textContent = '✓ UK visitor detected! UserStack API called.';
+                } else {
+                    statusDiv.className = 'status info';
+                    statusDiv.textContent = '✗ ' + data.message;
+                }
+
+                // Show detailed result
+                resultDiv.style.display = 'block';
+                resultData.textContent = JSON.stringify(data, null, 2);
+
+                // Log to console for debugging
+                console.log('Tracking result:', data);
+
+            } catch (error) {
+                statusDiv.className = 'status error';
+                statusDiv.textContent = '✗ Error: ' + error.message;
+                console.error('Tracking error:', error);
+            } finally {
+                trackBtn.disabled = false;
+            }
+        }
+
+        // Optional: Automatically track on page load
+        // Uncomment the next line to enable automatic tracking
+        // window.addEventListener('load', trackVisitor);
+    </script>
+</body>
+</html>
