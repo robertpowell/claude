@@ -1,0 +1,128 @@
+Countries Filtered (Excluding US, UK, and EU)
+============================================================
+
+FILTERED COUNTRIES (NOT US, UK, or EU):
+------------------------------------------------------------
+Code   | Country Name
+------------------------------------------------------------
+AD     | Andorra
+AE     | United Arab Emirates
+AF     | Afghanistan
+AL     | Albania
+AQ     | Antarctica
+AR     | Argentina
+AU     | Australia
+AX     | Åland Islands
+AZ     | Azerbaijan
+BB     | Barbados
+BD     | Bangladesh
+BO     | Bolivia
+BR     | Brazil
+BS     | Bahamas
+BY     | Belarus
+BZ     | Belize
+CA     | Canada
+CH     | Switzerland
+CL     | Chile
+CN     | China
+CO     | Colombia
+DO     | Dominican Republic
+DZ     | Algeria
+EC     | Ecuador
+EG     | Egypt
+ET     | Ethiopia
+GA     | Gabon
+GE     | Georgia
+GH     | Ghana
+GL     | Greenland
+HK     | Hong Kong
+ID     | Indonesia
+IL     | Israel
+IN     | India
+IR     | Iran
+IS     | Iceland
+JP     | Japan
+KE     | Kenya
+KH     | Cambodia
+KN     | Saint Kitts and Nevis
+KR     | South Korea
+KW     | Kuwait
+KZ     | Kazakhstan
+LA     | Laos
+LK     | Sri Lanka
+MA     | Morocco
+MD     | Moldova
+ME     | Montenegro
+MK     | North Macedonia
+MN     | Mongolia
+MX     | Mexico
+MY     | Malaysia
+NG     | Nigeria
+NI     | Nicaragua
+NO     | Norway
+NZ     | New Zealand
+OM     | Oman
+PA     | Panama
+PH     | Philippines
+PK     | Pakistan
+PR     | Puerto Rico
+RS     | Serbia
+RU     | Russia
+SA     | Saudi Arabia
+SC     | Seychelles
+SG     | Singapore
+SL     | Sierra Leone
+SO     | Somalia
+TH     | Thailand
+TN     | Tunisia
+TR     | Turkey
+TW     | Taiwan
+UA     | Ukraine
+UY     | Uruguay
+VE     | Venezuela
+VN     | Vietnam
+ZA     | South Africa
+ZW     | Zimbabwe
+
+============================================================
+
+EXCLUDED COUNTRIES (US, UK, EU):
+------------------------------------------------------------
+Code   | Country Name                   | Reason
+------------------------------------------------------------
+AT     | Austria                        | EU Member
+BE     | Belgium                        | EU Member
+BG     | Bulgaria                       | EU Member
+CZ     | Czech Republic                 | EU Member
+DE     | Germany                        | EU Member
+DK     | Denmark                        | EU Member
+EE     | Estonia                        | EU Member
+ES     | Spain                          | EU Member
+FI     | Finland                        | EU Member
+FR     | France                         | EU Member
+GB     | United Kingdom                 | United Kingdom
+GR     | Greece                         | EU Member
+HR     | Croatia                        | EU Member
+HU     | Hungary                        | EU Member
+IE     | Ireland                        | EU Member
+IT     | Italy                          | EU Member
+LT     | Lithuania                      | EU Member
+LU     | Luxembourg                     | EU Member
+LV     | Latvia                         | EU Member
+MT     | Malta                          | EU Member
+NL     | Netherlands                    | EU Member
+PL     | Poland                         | EU Member
+PT     | Portugal                       | EU Member
+RO     | Romania                        | EU Member
+SE     | Sweden                         | EU Member
+SI     | Slovenia                       | EU Member
+SK     | Slovakia                       | EU Member
+US     | United States                  | United States
+
+============================================================
+Summary:
+  Total countries in list: 106
+  Filtered (non-US/UK/EU): 78
+  Excluded (US/UK/EU): 28
+
+  Percentage of traffic from non-US/UK/EU: 73.58%
