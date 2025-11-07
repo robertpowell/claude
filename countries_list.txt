@@ -1,0 +1,123 @@
+Country Code Lookup
+============================================================
+
+Code   | Country Name
+------------------------------------------------------------
+AD     | Andorra
+AE     | United Arab Emirates
+AF     | Afghanistan
+AL     | Albania
+AQ     | Antarctica
+AR     | Argentina
+AT     | Austria
+AU     | Australia
+AX     | Åland Islands
+AZ     | Azerbaijan
+BB     | Barbados
+BD     | Bangladesh
+BE     | Belgium
+BG     | Bulgaria
+BO     | Bolivia
+BR     | Brazil
+BS     | Bahamas
+BY     | Belarus
+BZ     | Belize
+CA     | Canada
+CH     | Switzerland
+CL     | Chile
+CN     | China
+CO     | Colombia
+CZ     | Czech Republic
+DE     | Germany
+DK     | Denmark
+DO     | Dominican Republic
+DZ     | Algeria
+EC     | Ecuador
+EE     | Estonia
+EG     | Egypt
+ES     | Spain
+ET     | Ethiopia
+FI     | Finland
+FR     | France
+GA     | Gabon
+GB     | United Kingdom
+GE     | Georgia
+GH     | Ghana
+GL     | Greenland
+GR     | Greece
+HK     | Hong Kong
+HR     | Croatia
+HU     | Hungary
+ID     | Indonesia
+IE     | Ireland
+IL     | Israel
+IN     | India
+IR     | Iran
+IS     | Iceland
+IT     | Italy
+JP     | Japan
+KE     | Kenya
+KH     | Cambodia
+KN     | Saint Kitts and Nevis
+KR     | South Korea
+KW     | Kuwait
+KZ     | Kazakhstan
+LA     | Laos
+LK     | Sri Lanka
+LT     | Lithuania
+LU     | Luxembourg
+LV     | Latvia
+MA     | Morocco
+MD     | Moldova
+ME     | Montenegro
+MK     | North Macedonia
+MN     | Mongolia
+MT     | Malta
+MX     | Mexico
+MY     | Malaysia
+NG     | Nigeria
+NI     | Nicaragua
+NL     | Netherlands
+NO     | Norway
+NZ     | New Zealand
+OM     | Oman
+PA     | Panama
+PH     | Philippines
+PK     | Pakistan
+PL     | Poland
+PR     | Puerto Rico
+PT     | Portugal
+RO     | Romania
+RS     | Serbia
+RU     | Russia
+SA     | Saudi Arabia
+SC     | Seychelles
+SE     | Sweden
+SG     | Singapore
+SI     | Slovenia
+SK     | Slovakia
+SL     | Sierra Leone
+SO     | Somalia
+TH     | Thailand
+TN     | Tunisia
+TR     | Turkey
+TW     | Taiwan
+UA     | Ukraine
+US     | United States
+UY     | Uruguay
+VE     | Venezuela
+VN     | Vietnam
+ZA     | South Africa
+ZW     | Zimbabwe
+
+============================================================
+Total countries: 106
+
+Breakdown:
+  UK (GB): 1
+  Non-UK: 105
+
+If these represent your traffic:
+  UK traffic: 0.94%
+  Non-UK traffic: 99.06%
+  Potential UserStack API savings: ~99.06%
