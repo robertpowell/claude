@@ -5,13 +5,15 @@
  * Checks if IP is from: US, UK, EU members, Canada, Switzerland,
  * Australia, Norway, New Zealand, Iceland, and Japan
  *
+ * If the country lookup fails (returns null or empty), $isAllowed will be set to 0.
+ *
  * Usage:
  *   $remoteaddr = $_SERVER['REMOTE_ADDR'];
  *   $isAllowed = checkAllowedIP($remoteaddr);
  *   if ($isAllowed == 1) {
  *       // Allowed country - proceed with UserStack
  *   } else {
- *       // Not in allowed list - skip UserStack
+ *       // Not in allowed list or lookup failed - skip UserStack
  *   }
  */
 
@@ -37,6 +39,7 @@ function checkAllowedIP($ip) {
     $countryCode = getIPCountryCode($ip);
 
     // Check if in allowed list
+    // If country code is null or empty, isCountryAllowed() will return false, so $isAllowed = 0
     $isAllowed = isCountryAllowed($countryCode) ? 1 : 0;
 
     // Cache the result
@@ -52,7 +55,8 @@ function checkAllowedIP($ip) {
  * @return bool True if allowed, false otherwise
  */
 function isCountryAllowed($countryCode) {
-    if ($countryCode === null) {
+    // Return false if country code is null or empty
+    if ($countryCode === null || $countryCode === '' || trim($countryCode) === '') {
         return false;
     }
 
