@@ -50,25 +50,25 @@ terminal-notifier -group rbu -message "EU = Starting @Work" -title "Restic Backu
 echo "===Start of @Work to EU" >> /Users/robertpowell/ResticBackups/logs/$year/$month/ResticLog_$mfdate.txt
 
 restic -r s3:s3.eu-central-003.backblazeb2.com/EUBackup2025work -v -p ~/ResticBackups/secrets/repo_pw_1.txt backup /Users/robertpowell/Library/CloudStorage/Dropbox/@Work/ >> /Users/robertpowell/ResticBackups/logs/$year/$month/ResticLog_$mfdate.txt
-echo "===End of @Work to EU" >> /Users/robertpowell/ResticBackups/logs/$year/$month/ResticLog_$mfdate.txt
+echo "===End of @Work to US" >> /Users/robertpowell/ResticBackups/logs/$year/$month/ResticLog_$mfdate.txt
 
 terminal-notifier -group rbu -message "EU = Finished @Work ~ Starting robertpowell" -title "Restic Backups"
-echo "===Start of @@RobertPowell to EU" >> /Users/robertpowell/ResticBackups/logs/$year/$month/ResticLog_$mfdate.txt
+echo "===Start of @@RobertPowell to US" >> /Users/robertpowell/ResticBackups/logs/$year/$month/ResticLog_$mfdate.txt
 restic -r s3:s3.eu-central-003.backblazeb2.com/EuBackup2025robertpowell -v -p ~/ResticBackups/secrets/repo_pw_2.txt backup /Users/robertpowell/Library/CloudStorage/Dropbox/@@RobertPowell/ >> /Users/robertpowell/ResticBackups/logs/$year/$month/ResticLog_$mfdate.txt
-echo "===End of @@RobertPowell to EU" >> /Users/robertpowell/ResticBackups/logs/$year/$month/ResticLog_$mfdate.txt
+echo "===End of @@RobertPowell to US" >> /Users/robertpowell/ResticBackups/logs/$year/$month/ResticLog_$mfdate.txt
 
 
 terminal-notifier -group rbu -message "Finished @Work Starting Users" -title "Restic Backups"
-echo "===Start of User Folder with exclusions to EU" >> /Users/robertpowell/ResticBackups/logs/$year/$month/ResticLog_$mfdate.txt
+echo "===Start of User Folder with exclusions to US" >> /Users/robertpowell/ResticBackups/logs/$year/$month/ResticLog_$mfdate.txt
 restic -r s3:s3.eu-central-003.backblazeb2.com/EuBackup2025iMacUser -v -p ~/ResticBackups/secrets/repo_pw_3.txt backup /Users/robertpowell/ --exclude-file=/Users/robertpowell/ResticBackups/excludes/excludesrepo8.txt >> /Users/robertpowell/ResticBackups/logs/$year/$month/ResticLog_$mfdate.txt
-echo "===End of Users EU Backup" >> /Users/robertpowell/ResticBackups/logs/$year/$month/ResticLog_$mfdate.txt
+echo "===End of Users US Backup" >> /Users/robertpowell/ResticBackups/logs/$year/$month/ResticLog_$mfdate.txt
 terminal-notifier -group rbu -message "EU = Finished Users and EU backups" -title "Restic Backups"
 
 # elapsed time calculation
 end=$(date +%s)
 echo "===This Backup took: $((end - start))  seconds" >> /Users/robertpowell/ResticBackups/logs/$year/$month/ResticLog_$mfdate.txt
 terminal-notifier -group rbu -sound default -message "End of Backups - This backup took $((end - start)) seconds to complete" -title "Restic Backups" -open "file:///Users/robertpowell/ResticBackups/logs/$year/$month/ResticLog_$mfdate.txt"
-echo "===End of Backups===" >> /Users/robertpowell/ResticBackups/logs/$year/$month/ResticLog_$mfdate.txt
+echo "===End of US Backups===" >> /Users/robertpowell/ResticBackups/logs/$year/$month/ResticLog_$mfdate.txt
 
 # Read email body from file
 BODY=$(cat /Users/robertpowell/ResticBackups/logs/$year/$month/ResticLog_$mfdate.txt)
